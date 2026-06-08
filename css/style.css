@@ -676,3 +676,261 @@ body {
         padding: 1.5rem;
     }
 }
+/* EXTRA MOBILE RESPONSIVE - za sve ekrane */
+@media (max-width: 768px) {
+    /* Opšte */
+    .container {
+        padding: 1rem;
+    }
+    
+    /* Hero sekcija */
+    .hero {
+        padding: 1rem 0 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Features sekcija */
+    .features {
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .grid {
+        gap: 1rem;
+    }
+    
+    .card {
+        padding: 1.2rem;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card p {
+        font-size: 0.85rem;
+    }
+    
+    /* Demo sekcija - mobilni */
+    .demo {
+        padding: 1.2rem;
+        border-radius: 32px;
+        margin: 1.5rem 0;
+    }
+    
+    .demo h2 {
+        font-size: 1.3rem;
+    }
+    
+    .demo-subtitle {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+    }
+    
+    .input-group textarea {
+        font-size: 0.9rem;
+        padding: 0.8rem 0.8rem 0.8rem 2.8rem;
+        min-height: 100px;
+    }
+    
+    .input-icon {
+        left: 0.8rem;
+        top: 0.8rem;
+        font-size: 1.2rem;
+    }
+    
+    .demo-button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .result-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .logo-placeholder {
+        max-width: 120px;
+        font-size: 2rem;
+    }
+    
+    .result-header h3 {
+        font-size: 1rem;
+    }
+    
+    .result-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .color-dot-modern {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+    }
+    
+    .action-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Pricing sekcija - mobilni */
+    .pricing {
+        padding: 2rem 0;
+    }
+    
+    .pricing-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-card-modern {
+        padding: 1.2rem;
+    }
+    
+    .plan-icon {
+        font-size: 2rem;
+    }
+    
+    .pricing-card-modern h3 {
+        font-size: 1.2rem;
+    }
+    
+    .price-modern span:not(.currency):not(.period) {
+        font-size: 2rem;
+    }
+    
+    .price-modern .currency {
+        font-size: 1.2rem;
+    }
+    
+    .plan-description {
+        font-size: 0.75rem;
+    }
+    
+    .feature-item {
+        font-size: 0.75rem;
+        padding: 0.4rem 0;
+    }
+    
+    .feature-check {
+        width: 18px;
+        font-size: 0.8rem;
+    }
+    
+    .pricing-cta {
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0;
+        font-size: 0.75rem;
+    }
+    
+    .footer p {
+        line-height: 1.5;
+    }
+    
+    .copyright {
+        font-size: 0.65rem;
+    }
+}
+
+/* Za male telefone (max 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    
+    .github-btn {
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .color-dot-modern {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .pricing-grid-modern {
+        gap: 1rem;
+    }
+    
+    .popular-modern {
+        transform: scale(1);
+    }
+    
+    .popular-modern:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Za tablete (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-grid-modern {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
