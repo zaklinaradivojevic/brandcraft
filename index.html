@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandCraft.ai - AI Brand Generator for Coffee Shops</title>
+    <meta name="description" content="Generate a complete brand identity for your coffee shop in 30 seconds.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">🎨 BrandCraft.ai</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://github.com/brandcraft" class="github-btn" target="_blank">GitHub ⭐</a>
+            </div>
+        </nav>
+<section class="hero">
+    <div class="badge">✨ Your Vibe = Your Brand ✨</div>
+    <h1>Describe  <span class="highlight"> the vibe get</span><br>the brand</h1>
+    <p>Tell us the feeling you want. AI generates your complete brand identity — logo, colors, fonts, business cards, and social kit. No design skills needed.</p>
+    <a href="#demo" class="cta-button">🎨 Find your vibe →</a>
+</section>
+
+        <section id="features" class="features">
+            <h2 class="section-title">What you get</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Custom Logo</h3>
+                    <p>AI-generated logo that captures your coffee shop's unique vibe.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Color Palette</h3>
+                    <p>Professional color scheme with 5 carefully selected hex codes.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✍️</div>
+                    <h3>Font Pairing</h3>
+                    <p>Perfect heading and body font combination from Google Fonts.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💳</div>
+                    <h3>Business Card</h3>
+                    <p>Ready-to-print business card design matching your brand.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Social Kit</h3>
+                    <p>Instagram and Facebook profile templates (Pro version).</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>30 Seconds</h3>
+                    <p>From description to complete brand kit — faster than coffee brewing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo">
+    <h2>✨ Try it yourself ✨</h2>
+    <p class="demo-subtitle">Describe your vibe and watch AI create your brand in real-time</p>
+    
+    <div class="demo-form">
+        <div class="input-group">
+            <div class="input-icon">🎨</div>
+            <textarea id="brandPrompt" placeholder="Describe your brand vibe...&#10;Example: 'Modern coffee shop, industrial vibe' or 'Minimalist tech startup, clean and futuristic' or 'Cozy bookstore, vintage and warm'"></textarea>
+        </div>
+        
+        <button class="demo-button" id="generateBtn">
+            <span class="btn-text">Generate My Brand</span>
+            <span class="btn-icon">→</span>
+        </button>
+        
+        <div id="demoResult" class="demo-result">
+            <div class="result-header">
+                <h3>✨ Your Brand Identity</h3>
+                <div class="result-badge">AI Generated</div>
+            </div>
+            
+            <div class="result-grid">
+                <div class="result-logo">
+                    <div id="logoPreview" class="logo-preview">
+                        <div class="logo-placeholder">🎨</div>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="detail-section">
+                        <label>🎨 Color Palette</label>
+                        <div id="colorPreview" class="color-preview-modern"></div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <label>✍️ Font Pairing</label>
+                        <div id="fontPreview"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-actions">
+                <button class="action-btn" id="downloadPreviewBtn">
+                    📥 Download Preview
+                </button>
+                <p class="demo-note">⭐ Full resolution, SVG export, and social kit available in <strong>Pro version</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="pricing" class="pricing">
+    <h2 class="section-title">Simple, transparent pricing</h2>
+    <p class="pricing-subtitle">Start free, upgrade when you need more</p>
+    
+    <div class="pricing-grid-modern">
+        <!-- Free Plan -->
+        <div class="pricing-card-modern">
+            <div class="card-header">
+                <div class="plan-icon">🎨</div>
+                <h3>Free</h3>
+                <div class="price-modern">
+                    <span class="currency">$</span>0
+                    <span class="period">forever</span>
+                </div>
+                <p class="plan-description">Perfect for trying out and small projects</p>
+            </div>
+            
+            <ul class="plan-features">
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Low-res logo (512px PNG)</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Basic color palette</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Font pairing</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Business card preview</span>
+                </li>
+                <li class="feature-item disabled">
+                    <span class="feature-check">✗</span>
+                    <span>Vector export (SVG)</span>
+                </li>
+                <li class="feature-item disabled">
+                    <span class="feature-check">✗</span>
+                    <span>Social media kit</span>
+                </li>
+                <li class="feature-item disabled">
+                    <span class="feature-check">✗</span>
+                    <span>High-res export (2048px)</span>
+                </li>
+            </ul>
+            
+            <a href="#demo" class="pricing-cta free-cta">Start Free →</a>
+        </div>
+        
+        <!-- Pro Plan (Popular) -->
+        <div class="pricing-card-modern popular-modern">
+            <div class="popular-tag">🔥 Most Popular</div>
+            <div class="card-header">
+                <div class="plan-icon">✨</div>
+                <h3>Pro</h3>
+                <div class="price-modern">
+                    <span class="currency">$</span>19
+                    <span class="period">one-time</span>
+                </div>
+                <p class="plan-description">Everything you need for a professional brand</p>
+            </div>
+            
+            <ul class="plan-features">
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>High-res logo (2048px PNG)</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Vector export (SVG)</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Complete color palette</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Font pairing with Google Fonts</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Social media kit (Instagram, Facebook, X)</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Business card template (print-ready)</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Priority support</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Lifetime updates</span>
+                </li>
+            </ul>
+            
+            <a href="#" class="pricing-cta pro-cta" id="proBtnModern">Get Pro →</a>
+        </div>
+        
+        <!-- Enterprise Plan -->
+        <div class="pricing-card-modern">
+            <div class="card-header">
+                <div class="plan-icon">🏢</div>
+                <h3>Enterprise</h3>
+                <div class="price-modern">
+                    <span class="currency">$</span>99
+                    <span class="period">one-time</span>
+                </div>
+                <p class="plan-description">For agencies and multiple brands</p>
+            </div>
+            
+            <ul class="plan-features">
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Everything in Pro</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Up to 10 brands</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Team collaboration</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>White-label export</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>API access</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-check">✓</span>
+                    <span>Dedicated support</span>
+                </li>
+            </ul>
+            
+            <a href="#" class="pricing-cta enterprise-cta" id="enterpriseBtn">Contact Sales →</a>
+        </div>
+    </div>
+</section>
+
+        <footer class="footer">
+            <p>🎨 <strong>BrandCraft.ai</strong> — AI brand generator for your vibe<br>
+            <a href="https://github.com/brandcraft">GitHub</a> • 
+            <a href="#">Twitter</a> • 
+            <a href="mailto:hello@brandcraft.ai">Email</a></p>
+           <p class="copyright">✨ Your vibe becomes your brand ✨</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
