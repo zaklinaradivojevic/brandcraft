@@ -176,5 +176,15 @@ if (enterpriseBtn) {
         alert('🏢 Enterprise Plan\n\nPerfect for agencies and teams managing multiple brands.\n\nIncludes: 10+ brands, team collaboration, white-label export, API access.\n\n📧 Contact us: enterprise@brandcraft.ai');
     });
 }
+// Auto-resize textarea - sprečava skroler
+const textarea = document.getElementById('brandPrompt');
+if (textarea) {
+    function autoResize() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    }
+    textarea.addEventListener('input', autoResize);
+    autoResize.call(textarea);
+}
 
 console.log('BrandCraft.ai - Modern version ready! 🎨✨'); 
