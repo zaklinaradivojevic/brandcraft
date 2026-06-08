@@ -1,4 +1,9 @@
 [![Live Demo](https://img.shields.io/badge/demo-live-green)](https://zaklinaradivojevic.github.io/brandcraft)
+[![GitHub stars](https://img.shields.io/github/stars/zaklinaradivojevic/brandcraft)](https://github.com/zaklinaradivojevic/brandcraft/stargazers)
+[![GitHub license](https://img.shields.io/github/license/zaklinaradivojevic/brandcraft)](https://github.com/zaklinaradivojevic/brandcraft/blob/main/LICENSE)
+[![Made with FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)](https://openai.com/)
+[![Vibe Coding](https://img.shields.io/badge/Vibe-Coding-ff69b4)](https://github.com/topics/vibecoding)
 
 # 🎨 BrandCraft.ai
 
