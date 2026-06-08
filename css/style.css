@@ -17,6 +17,7 @@ body {
     padding: 2rem;
 }
 
+/* Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
+/* Hero */
 .hero {
     text-align: center;
     padding: 2rem 0 4rem;
@@ -99,8 +101,8 @@ body {
 
 .cta-button {
     display: inline-block;
-     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #dbdde5;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     padding: 1rem 2rem;
     border-radius: 999px;
     font-weight: 700;
@@ -115,6 +117,7 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
+/* Features */
 .features {
     padding: 4rem 0;
 }
@@ -163,236 +166,6 @@ body {
     line-height: 1.5;
 }
 
-.demo {
-    background: white;
-    border-radius: 32px;
-    padding: 3rem;
-    margin: 3rem 0;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.demo h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-}
-
-.demo-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 16px;
-    font-size: 1rem;
-    font-family: inherit;
-    min-height: 120px;
-    margin-bottom: 1rem;
-    resize: vertical;
-}
-
-textarea:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-.demo-button {
-    width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 999px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.demo-button:hover {
-    transform: scale(1.02);
-}
-
-.demo-button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.demo-result {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #f8fafc;
-    border-radius: 16px;
-    display: none;
-}
-
-.demo-result.show {
-    display: block;
-}
-
-.logo-preview {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.logo-placeholder {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 24px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-}
-
-.color-preview {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 1rem 0;
-    flex-wrap: wrap;
-}
-
-.color-dot {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.color-dot:hover {
-    transform: scale(1.05);
-}
-
-.demo-note {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: #666;
-    text-align: center;
-}
-
-.pricing {
-    padding: 4rem 0;
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.pricing-card {
-    background: white;
-    border-radius: 24px;
-    padding: 2rem;
-    text-align: center;
-    position: relative;
-}
-
-.pricing-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #667eea;
-    margin: 1rem 0;
-}
-
-.price small {
-    font-size: 0.875rem;
-    font-weight: normal;
-    color: #666;
-}
-
-.pricing-card ul {
-    list-style: none;
-    margin: 1.5rem 0;
-}
-
-.pricing-card li {
-    padding: 0.5rem 0;
-    color: #4a5568;
-}
-
-.cta-small {
-    background: #667eea;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 600;
-    transition: background 0.2s;
-}
-
-.cta-small:hover {
-    background: #5a67d8;
-}
-
-.popular {
-    border: 2px solid #667eea;
-}
-
-.popular-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #667eea;
-    color: white;
-    padding: 0.25rem 1rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.footer {
-    text-align: center;
-    padding: 3rem 0;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    margin-top: 3rem;
-    color: rgba(255,255,255,0.7);
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.copyright {
-    margin-top: 1rem;
-    font-size: 0.75rem;
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .container {
-        padding: 1rem;
-    }
-    .demo {
-        padding: 1.5rem;
-    }
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
 /* Modern Demo Section - Glassmorphism */
 .demo {
     background: rgba(255, 255, 255, 0.08);
@@ -423,7 +196,6 @@ textarea:focus {
     margin: 0 auto;
 }
 
-/* Input group with icon */
 .input-group {
     position: relative;
     margin-bottom: 1.5rem;
@@ -462,7 +234,6 @@ textarea:focus {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Modern button */
 .demo-button {
     width: 100%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -500,7 +271,6 @@ textarea:focus {
     transform: translateX(5px);
 }
 
-/* Result section */
 .demo-result {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
@@ -656,17 +426,10 @@ textarea:focus {
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
 }
+
 /* Modern Pricing Section */
 .pricing {
     padding: 4rem 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 0.5rem;
 }
 
 .pricing-subtitle {
@@ -701,7 +464,6 @@ textarea:focus {
     box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.3);
 }
 
-/* Popular plan */
 .popular-modern {
     border: 1px solid rgba(102, 126, 234, 0.5);
     background: rgba(102, 126, 234, 0.1);
@@ -728,7 +490,6 @@ textarea:focus {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Card header */
 .card-header {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -776,7 +537,6 @@ textarea:focus {
     line-height: 1.4;
 }
 
-/* Features list */
 .plan-features {
     list-style: none;
     margin: 1.5rem 0;
@@ -816,7 +576,6 @@ textarea:focus {
     color: rgba(255, 255, 255, 0.25);
 }
 
-/* CTA Buttons */
 .pricing-cta {
     display: block;
     text-align: center;
@@ -862,21 +621,57 @@ textarea:focus {
     transform: translateY(-2px);
 }
 
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 3rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+    .demo {
+        padding: 1.5rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
     .pricing-grid-modern {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
     .popular-modern {
         transform: scale(1);
     }
-    
     .popular-modern:hover {
         transform: translateY(-8px);
     }
-    
     .pricing-card-modern {
         padding: 1.5rem;
     }
