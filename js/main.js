@@ -97,25 +97,52 @@ async function generateBrand() {
     const originalText = generateBtn.querySelector('.btn-text').textContent;
     const btnIcon = generateBtn.querySelector('.btn-icon');
     
-    generateBtn.querySelector('.btn-text').textContent = 'Creating your brand';
+    generateBtn.querySelector('.btn-text').textContent = 'AI is creating';
     btnIcon.textContent = '🎨';
     generateBtn.disabled = true;
     
-    setTimeout(() => {
-        const colors = generateColorsFromPrompt(prompt);
-        const fonts = generateFonts(prompt);
-        const tagline = generateTagline(prompt);
+    try {
+        // Poziv backend API-ja
+        const response = await fetch('http://localhost:8000/api/generate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                prompt: prompt,
+                business_type: 'general'
+            })
+        });
         
-        displayColors(colors);
-        displayFonts(fonts, tagline);
+        if (!response.ok) {
+            throw new Error('API error: ' + response.status);
+        }
+        
+        const data = await response.json();
+        
+        // Prikazi logo
+        const logoPlaceholder = document.querySelector('.logo-placeholder');
+        if (logoPlaceholder) {
+            logoPlaceholder.innerHTML = `<img src="${data.logo_url}" style="width:100%; height:100%; object-fit:cover; border-radius:28px;">`;
+        }
+        
+        // Prikazi boje
+        displayColors(data.colors);
+        
+        // Prikazi fontove i tagline
+        displayFonts(data.fonts, data.tagline);
+        
         demoResult.classList.add('show');
-        
         demoResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Sorry, something went wrong. Please make sure the backend is running on port 8000');
+    } finally {
         generateBtn.querySelector('.btn-text').textContent = originalText;
         btnIcon.textContent = '→';
         generateBtn.disabled = false;
-    }, 1500);
+    }
 }
 
 function downloadPreview() {
