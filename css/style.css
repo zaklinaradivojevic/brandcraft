@@ -934,3 +934,17 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* Mobilna verzija - skraćeni tekstovi */
+@media (max-width: 768px) {
+    .demo-subtitle {
+        display: none;
+    }
+    
+    .demo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .demo h2::after {
+        content: " ✨";
+    }
+}
