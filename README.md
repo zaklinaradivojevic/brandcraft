@@ -1,3 +1,5 @@
+[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://zaklinaradivojevic.github.io/brandcraft)
+
 # 🎨 BrandCraft.ai
 
 ## Your Vibe = Your Brand
@@ -18,9 +20,12 @@ Describe the vibe, get the brand. AI-powered brand identity generator.
 - Vanilla JavaScript
 - Glassmorphism Design
 
-## 📦 Installation
+## 🚀 Run Locally
 
-```bash
-git clone https://github.com/YOUR_USERNAME/brandcraft.git
-cd brandcraft
-open index.html
+1.  Clone the repo
+2.  Run frontend: Open `index.html`
+3.  Run backend:
+    ```bash
+    cd backend
+    pip install -r requirements.txt
+    uvicorn main:app --reload
