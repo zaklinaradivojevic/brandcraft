@@ -1,4 +1,4 @@
- // BrandCraft.ai - Main JavaScript (Modern Version)
+// BrandCraft.ai - Main JavaScript (Modern Version)
 
 // DOM elementi
 const generateBtn = document.getElementById('generateBtn');
@@ -7,16 +7,6 @@ const demoResult = document.getElementById('demoResult');
 const colorPreview = document.getElementById('colorPreview');
 const fontPreview = document.getElementById('fontPreview');
 const downloadBtn = document.getElementById('downloadPreviewBtn');
-// Uzmi prva dva slova ili skrati ime brenda
-let brandInitials = prompt.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
-if (brandInitials.length === 1) brandInitials = brandInitials + brandInitials;
-
-// Ili ako imaš specifično ime brenda - napravi ga iz prve dve reči
-const brandWords = prompt.split(' ').slice(0, 2);
-const brandName = brandWords.join(' ').substring(0, 15);
-
-// Modifikuj SVG logo da pokaže inicijale ili skraćeno ime
-const logoUrl = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23${primaryColor}' rx='20'/%3E%3Ctext x='50' y='67' font-size='${brandInitials.length > 1 ? 35 : 45}' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3E${brandInitials}%3C/text%3E%3C/svg%3E`;
 
 function generateColorsFromPrompt(prompt) {
     const lowerPrompt = prompt.toLowerCase();
@@ -112,42 +102,37 @@ async function generateBrand() {
     generateBtn.disabled = true;
     
     try {
-        // Poziv backend API-ja
-        const response = await fetch('http://localhost:8000/api/generate', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                prompt: prompt,
-                business_type: 'general'
-            })
-        });
+        // 1. Generiši boje, fontove i tagline na osnovu prompta
+        const colors = generateColorsFromPrompt(prompt);
+        const fonts = generateFonts(prompt);
+        const tagline = generateTagline(prompt);
         
-        if (!response.ok) {
-            throw new Error('API error: ' + response.status);
-        }
+        // 2. Napravi SVG logo sa generisanom bojom
+        const primaryColor = colors.primary.replace('#', '');
         
-        const data = await response.json();
+        // Uzmi inicijale iz prompta (prva slova svake reči)
+        let brandInitials = prompt.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
+        if (brandInitials.length === 1) brandInitials = brandInitials + brandInitials;
+        
+        // Kreiraj SVG logo
+        const logoUrl = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23${primaryColor}' rx='20'/%3E%3Ctext x='50' y='67' font-size='${brandInitials.length > 1 ? 35 : 45}' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3E${brandInitials}%3C/text%3E%3C/svg%3E`;
         
         // Prikazi logo
         const logoPlaceholder = document.querySelector('.logo-placeholder');
         if (logoPlaceholder) {
-            logoPlaceholder.innerHTML = `<img src="${data.logo_url}" style="width:100%; height:100%; object-fit:cover; border-radius:28px;">`;
+            logoPlaceholder.innerHTML = `<img src="${logoUrl}" style="width:100%; height:100%; object-fit:cover; border-radius:28px;">`;
         }
         
-        // Prikazi boje
-        displayColors(data.colors);
-        
-        // Prikazi fontove i tagline
-        displayFonts(data.fonts, data.tagline);
+        // Prikazi boje i fontove
+        displayColors(colors);
+        displayFonts(fonts, tagline);
         
         demoResult.classList.add('show');
         demoResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
     } catch (error) {
         console.error('Error:', error);
-        alert('Sorry, something went wrong. Please make sure the backend is running on port 8000');
+        alert('Sorry, something went wrong. Please try again.');
     } finally {
         generateBtn.querySelector('.btn-text').textContent = originalText;
         btnIcon.textContent = '→';
@@ -213,6 +198,7 @@ if (enterpriseBtn) {
         alert('🏢 Enterprise Plan\n\nPerfect for agencies and teams managing multiple brands.\n\nIncludes: 10+ brands, team collaboration, white-label export, API access.\n\n📧 Contact us: enterprise@brandcraft.ai');
     });
 }
+
 // Auto-resize textarea - sprečava skroler
 const textarea = document.getElementById('brandPrompt');
 if (textarea) {
@@ -224,4 +210,4 @@ if (textarea) {
     autoResize.call(textarea);
 }
 
-console.log('BrandCraft.ai - Modern version ready! 🎨✨'); 
+console.log('BrandCraft.ai - Modern version ready! 🎨✨');
