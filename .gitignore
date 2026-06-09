@@ -15,4 +15,6 @@ desktop.ini
 
 # Node
 node_modules/
+
 .env
+backend/.env

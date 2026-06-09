@@ -7,6 +7,16 @@ const demoResult = document.getElementById('demoResult');
 const colorPreview = document.getElementById('colorPreview');
 const fontPreview = document.getElementById('fontPreview');
 const downloadBtn = document.getElementById('downloadPreviewBtn');
+// Uzmi prva dva slova ili skrati ime brenda
+let brandInitials = prompt.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
+if (brandInitials.length === 1) brandInitials = brandInitials + brandInitials;
+
+// Ili ako imaš specifično ime brenda - napravi ga iz prve dve reči
+const brandWords = prompt.split(' ').slice(0, 2);
+const brandName = brandWords.join(' ').substring(0, 15);
+
+// Modifikuj SVG logo da pokaže inicijale ili skraćeno ime
+const logoUrl = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23${primaryColor}' rx='20'/%3E%3Ctext x='50' y='67' font-size='${brandInitials.length > 1 ? 35 : 45}' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3E${brandInitials}%3C/text%3E%3C/svg%3E`;
 
 function generateColorsFromPrompt(prompt) {
     const lowerPrompt = prompt.toLowerCase();
