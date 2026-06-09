@@ -107,15 +107,16 @@ async function generateBrand() {
         const fonts = generateFonts(prompt);
         const tagline = generateTagline(prompt);
         
-        // 2. Napravi SVG logo sa generisanom bojom
+               // 2. Napravi unikatan logo sa DiceBear (uvek različit!)
         const primaryColor = colors.primary.replace('#', '');
+        const seed = encodeURIComponent(prompt);
         
-        // Uzmi inicijale iz prompta (prva slova svake reči)
-        let brandInitials = prompt.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
-        if (brandInitials.length === 1) brandInitials = brandInitials + brandInitials;
+        // Random izbor stila za logo (svaki put drugačiji!)
+        const styles = ['identicon', 'micah', 'lorelei', 'initials', 'adventurer', 'pixel-art'];
+        const randomStyle = styles[Math.floor(Math.random() * styles.length)];
         
-        // Kreiraj SVG logo
-        const logoUrl = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23${primaryColor}' rx='20'/%3E%3Ctext x='50' y='67' font-size='${brandInitials.length > 1 ? 35 : 45}' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'%3E${brandInitials}%3C/text%3E%3C/svg%3E`;
+        // Kreiraj URL za DiceBear logo
+        const logoUrl = `https://api.dicebear.com/9.x/${randomStyle}/svg?seed=${seed}&backgroundColor=${primaryColor}&radius=20&size=120`;
         
         // Prikazi logo
         const logoPlaceholder = document.querySelector('.logo-placeholder');
